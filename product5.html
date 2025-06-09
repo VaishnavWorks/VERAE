@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Women's Crop Top | VERAÉ</title>
+  <link rel="stylesheet" href="product-style.css" />
+</head>
+<body>
+  <header>
+    <h1>VERAÉ</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="womens.html">Women's Clothing</a>
+      <a href="cart.html">🛒 Cart</a>
+    </nav>
+  </header>
+
+  <main class="product-page">
+    <div class="product-detail">
+      <img src="images/wct.jpg" alt="Women's Crop Top" />
+      <div class="info">
+        <h2>Women's Crop Top</h2>
+        <p>Category: Women</p>
+        <p>Subcategory: Tops</p>
+        <p class="price">$29.99</p>
+        <button onclick="addToCart(5)">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 VERAÉ. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(id) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const existing = cart.find(item => item.id === id);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ id, quantity: 1 });
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      window.location.href = "cart.html";
+    }
+  </script>
+</body>
+</html>

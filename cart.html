@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cart | VERAÉ</title>
+  <link rel="stylesheet" href="style-cart.css" />
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
+</head>
+<body>
+  <header>
+    <h1>Your Cart</h1>
+    <nav>
+      <a href="index.html">← Continue Shopping</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="cart-items">
+      <!-- Cart items will be dynamically inserted here by cart.js -->
+    </div>
+
+    <section id="checkout-section">
+      <h2>Checkout</h2>
+      <form id="checkout-form" action="https://formsubmit.co/smithasbahrain@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Cash on Delivery Order!" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://verae.bigcartel.com/thank-you" />
+
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="phone" placeholder="Phone Number" required />
+        <input type="text" name="address" placeholder="Address / Street Name" required />
+        <input type="text" name="block" placeholder="Block / Apartment" required />
+        <input type="text" name="city" placeholder="City" required />
+        <input type="text" name="state" placeholder="State / Province" required />
+        <input type="text" name="zip" placeholder="ZIP / Postal Code" required />
+        <input type="text" name="country" placeholder="Country" required />
+
+        <button type="submit" id="cod-btn">Cash on Delivery</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="cart.js"></script>
+</body>
+</html>

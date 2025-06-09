@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>VERAÉ – Boys</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>VERAÉ</h1>
+      <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()" />
+      <select id="currencySelector" onchange="changeCurrency(this.value)"></select>
+      <a class="cart-link" href="cart.html">🛒 Cart</a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mens.html">Men</a>
+      <a href="womens.html">Women</a>
+      <a href="girls.html">Girls</a>
+      <a href="boys.html" class="active">Boys</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>🧢 Boys' Clothing</h2>
+      <div class="product-list" id="boys-products"></div>
+
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 VERAÉ. All rights reserved.</p></footer>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+  <script>
+    displayProductsByCategory('Boys');
+  </script>
+</body>
+</html>
