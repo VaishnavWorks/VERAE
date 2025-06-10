@@ -1,4 +1,4 @@
-const allProducts = [
+const products = [
   { id: 1, name: "Men's Denim Jacket", category: "Men", subcategory: "Jackets", price: 59.99, image: "images/mdj.jpg" },
   { id: 2, name: "Men's Formal Shirt", category: "Men", subcategory: "Shirts", price: 39.99, image: "images/mfs.jpg" },
   { id: 3, name: "Men's Chinos", category: "Men", subcategory: "Trousers", price: 49.99, image: "images/mc.jpg" },
