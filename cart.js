@@ -83,6 +83,7 @@ function renderCart() {
   cartItemsContainer.appendChild(totalElement);
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
   renderCart();
 });
